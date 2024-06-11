@@ -25,7 +25,11 @@ def get_question_type():
     :returns: "sum" for an addition question, "difference" for a subtraction question.
     """
     # complete this function below here
-    return "sum" if random.randint(1, 6) <= 3 else "difference"
+    random_number = random.randint(1, 6)
+    if random_number <= 3:
+        return "sum"
+    else:
+        return "difference"
 
 
 def print_question(die_1_value, die_2_value, question_type):
